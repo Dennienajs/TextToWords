@@ -1,0 +1,21 @@
+### dotnet watch run --project .\Words.Api\
+
+### Post Text
+POST {{host}}/{{text}}
+Content-Type: application/json
+
+{
+  "text": "a horse and a dog"
+}
+
+### Post Text - Lorem Ipsum
+POST {{host}}/{{text}}
+Content-Type: application/json
+
+{
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et elit fringilla, tempor mauris in, vehicula neque. Suspendisse sit amet leo sem. Suspendisse ullamcorper felis elit, sit amet pulvinar nulla eleifend sit amet. Vivamus est augue, placerat ac nisi id, pulvinar sollicitudin dui. Fusce viverra convallis rutrum. Maecenas tempus urna lorem, eu facilisis sem porta finibus. Etiam dignissim iaculis velit, ac sollicitudin ex fringilla a. Donec ultrices, purus a lobortis viverra, sapien orci viverra urna, vitae hendrerit neque leo at justo. Nullam ornare, est non venenatis lobortis, nisi sem efficitur elit, sit amet sodales libero tortor sit amet mauris. Donec a ligula dui. Integer ullamcorper quam congue enim luctus, eget facilisis justo dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et elit fringilla, tempor mauris in, vehicula neque. Suspendisse sit amet leo sem. Suspendisse ullamcorper felis elit, sit amet pulvinar nulla eleifend sit amet. Vivamus est augue, placerat ac nisi id, pulvinar sollicitudin dui. Fusce viverra convallis rutrum. Maecenas tempus urna lorem, eu facilisis sem porta finibus. Etiam dignissim iaculis velit, ac sollicitudin ex fringilla a. Donec ultrices, purus a lobortis viverra, sapien orci viverra urna, vitae hendrerit neque leo at justo. Nullam ornare, est non venenatis lobortis, nisi sem efficitur elit, sit amet sodales libero tortor sit amet mauris. Donec a ligula dui. Integer ullamcorper quam congue enim luctus, eget facilisis justo dapibus. Mauris suscipit ipsum vel mauris convallis tempor. Ut pulvinar a massa eu eleifend. Aliquam ac mi a sem cursus feugiat nec eu lectus. Etiam sagittis congue odio, nec fringilla justo vestibulum sit amet. Mauris sed mattis erat. Nam quis ante erat. Curabitur sollicitudin erat sem, vitae elementum eros venenatis eget. Nulla volutpat, velit viverra auctor suscipit, dolor sapien porttitor neque, in tempor dolor nulla iaculis turpis. Curabitur ac ligula massa. Ut quis nisl non metus facilisis molestie. Vestibulum efficitur tortor ac metus fermentum, ornare consequat ex volutpat. Maecenas aliquam accumsan posuere. Aliquam porta leo quam, et facilisis elit porttitor sed. Aenean et vestibulum ante.Sed eu egestas turpis, sit amet feugiat nulla. Nullam nunc risus, cursus sed gravida at, dignissim sed erat. Curabitur nec facilisis purus, ac tincidunt lectus. Quisque metus lacus, placerat et felis at, ultrices suscipit nibh. Proin metus massa, dictum eget ante vel, fringilla consectetur metus. Etiam vitae urna ac magna tincidunt vestibulum vel a augue. Mauris sed mattis mauris. Integer vestibulum eget neque et semper. Nulla ultricies congue dui eu gravida. Suspendisse luctus bibendum enim non posuere. Nullam congue magna a suscipit congue. Praesent bibendum tempus mauris ut blandit. Sed eu egestas turpis, sit amet feugiat nulla. Nullam nunc risus, cursus sed gravida at, dignissim sed erat. Curabitur nec facilisis purus, ac tincidunt lectus. Quisque metus lacus, placerat et felis at, ultrices suscipit nibh. Proin metus massa, dictum eget ante vel, fringilla consectetur metus. Etiam vitae urna ac magna tincidunt vestibulum vel a augue. Mauris sed mattis mauris. Integer vestibulum eget neque et semper. Nulla ultricies congue dui eu gravida. Suspendisse luctus bibendum enim non posuere. Nullam congue magna a suscipit congue. Praesent bibendum tempus mauris ut blandit."
+}
+
+
+### Delete All Words
+DELETE {{host}}/{{text}}

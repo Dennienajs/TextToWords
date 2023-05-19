@@ -1,6 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a0d9339a_002D7357_002D47cb_002Db7dc_002D887623ea9f84/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::B3EAAC0F-2697-4C2F-8792-ABA6A064EEF8::net7.0::Words.Api.Tests.Unit.UnitTest1.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B3EAAC0F-2697-4C2F-8792-ABA6A064EEF8::net7.0::Words.Api.Tests.Unit.CreateWordTests.CreateWord_Should_ReturnWordWithEntryOnlyContainingLowerCaseLetters&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::80CCEE0B-1E6D-4910-A7D3-0F6EF8DB5A83::net7.0::Words.Api.Tests.Integration.PostTextEndpointTests.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::80CCEE0B-1E6D-4910-A7D3-0F6EF8DB5A83::net7.0::Words.Api.Tests.Integration.PostTextEndpointTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B3EAAC0F-2697-4C2F-8792-ABA6A064EEF8::net7.0::Words.Api.Tests.Unit.CreateWordTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

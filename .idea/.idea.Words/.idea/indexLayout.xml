@@ -4,7 +4,12 @@
     <attachedFolders>
       <Path>.idea</Path>
     </attachedFolders>
-    <explicitIncludes />
+    <explicitIncludes>
+      <Path>.gitignore</Path>
+      <Path>Text.http</Path>
+      <Path>global.json</Path>
+      <Path>http-client.env.json</Path>
+    </explicitIncludes>
     <explicitExcludes />
   </component>
 </project>
