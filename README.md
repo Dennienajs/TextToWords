@@ -7,3 +7,7 @@
 - Xunit
 
 Example requests in `Text.http`
+
+Update database by running
+
+- `dotnet ef database update --project Words.Api\Words.Api.csproj \ --startup-project Words.Api\Words.Api.csproj --context Words.Api.Data.WordsDbContext`
