@@ -7,7 +7,7 @@ namespace Words.Api.Services;
 public interface IWordsService
 {
     List<Word> GetDistinctUniqueWords(string text);
-    Task<int> AddRange(IEnumerable<Word> words, CancellationToken cancellationToken);
+    Task<int> AddRange(List<Word> words, CancellationToken cancellationToken);
     Task<List<string>> GetWatchlistWordsFrom(IEnumerable<Word> words, CancellationToken cancellationToken);
     Task DeleteAllWords(CancellationToken cancellationToken);
 }
@@ -27,24 +27,33 @@ public class WordsService : IWordsService
             return new();
         
         List<Word> words = text
-            .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
             .Select(Word.Create)
-            .DistinctBy(x => x.Entry)
+            .DistinctBy(x => x.Entry, StringComparer.OrdinalIgnoreCase)
             .ToList();
         
         return words;
     }
-
-    public async Task<int> AddRange(IEnumerable<Word> words, CancellationToken cancellationToken)
+    
+    public async Task<int> AddRange(List<Word> words, CancellationToken cancellationToken)
     {
-        List<Word> wordsNotInDb = words
-            .Where(newWord => !_context.Words.Any(db => db.Entry == newWord.Entry))
+        IEnumerable<string> newEntries = words.Select(x => x.Entry);
+        
+        List<string> wordEntriesAlreadyInDb = await _context.Words
+            .AsNoTracking()
+            .Where(x => newEntries.Contains(x.Entry))
+            .Select(x => x.Entry)
+            .ToListAsync(cancellationToken: cancellationToken);
+
+
+        List<Word> wordsToAdd = words
+            .ExceptBy(wordEntriesAlreadyInDb, x => x.Entry)
             .ToList();
         
-        _context.Words.AddRange(wordsNotInDb);
+        _context.Words.AddRange(wordsToAdd);
         await _context.SaveChangesAsync(cancellationToken);
-
-        return wordsNotInDb.Count;
+        
+        return wordsToAdd.Count;
     }
     
     public async Task<List<string>> GetWatchlistWordsFrom(IEnumerable<Word> words, CancellationToken cancellationToken)
