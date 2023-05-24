@@ -1,0 +1,20 @@
+﻿version: '3.8'
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongPassword123
+      - MSSQL_PID=Express
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+    networks:
+      - sql-network
+
+volumes:
+  sqlserverdata:
+
+networks:
+  sql-network:
