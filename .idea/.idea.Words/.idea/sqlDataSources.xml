@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="DdlMappings">
-    <mapping uuid="4947ae1b-d932-4f7c-956d-8077af2822d6" name="Microsoft SQL Server LocalDB (JetBrains) Mapping">
-      <data-sources db="d9422697-94c0-4fe9-a166-c77edc6e2b7e" ddl="15cac606-af8c-4a78-83d6-4e69bf04bca0" />
-    </mapping>
-  </component>
-</project>
